@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Registros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Captura de Datos (Frontend HTML)</h2>
+    
+    <form onsubmit="event.preventDefault(); alert('Modo HTML estático: El formulario no guarda datos en la base de datos.');">
+        
+        <!-- Header Row -->
+        <div class="form-header">
+            <div class="header-col col-name">Name 
+                <svg class="svg-icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div class="header-col col-type">Type</div>
+            <div class="header-col col-default">Default Value 
+                <svg class="svg-icon" viewBox="0 0 24 24" style="width:12px;height:12px;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <div class="header-col col-primary">Primary</div>
+        </div>
+
+        <!-- Row: id (disabled) -->
+        <div class="form-row">
+            <div class="input-group col-name disabled">
+                <div class="input-content" style="font-weight: 500;">id</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type disabled">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">#</div>
+                <div class="input-content" style="padding-left: 0;">int8</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default disabled">
+                <div class="input-content" style="color: #cbd5e1; font-weight: 500;">NULL</div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox" checked disabled>
+            </div>
+        </div>
+
+        <!-- Row: nombre -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">nombre</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="nombre" placeholder="NULL" required>
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: paterno -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">paterno</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="paterno" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: materno -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">materno</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="materno" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: calle -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">calle</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="calle" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: numero -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">numero</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">#</div>
+                <div class="input-content" style="padding-left: 0;">int4</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="number" name="numero" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: colonia -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">colonia</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="colonia" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: telefono -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">telefono</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="telefono" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Row: mail -->
+        <div class="form-row">
+            <div class="input-group col-name">
+                <div class="input-content" style="font-weight: 500;">mail</div>
+                <div class="input-icon bg-gray">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </div>
+            </div>
+            <div class="input-group col-type">
+                <div class="input-icon" style="font-family: monospace; font-weight: bold; font-size: 14px; width: 24px; color: #6b7280;">T</div>
+                <div class="input-content" style="padding-left: 0;">text</div>
+                <div class="input-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"></polyline><polyline points="7 9 12 4 17 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="input-group col-default">
+                <input type="text" name="mail" placeholder="NULL">
+                <div class="input-icon list-icon">
+                    <svg class="svg-icon" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                </div>
+            </div>
+            <div class="col-primary">
+                <input type="checkbox" class="custom-checkbox">
+            </div>
+        </div>
+
+        <div style="overflow: hidden;">
+            <button type="submit" class="submit-btn" style="background:var(--primary);color:var(--bg-white)">Save Record (Demo)</button>
+        </div>
+    </form>
+    
+    <div class="divider"></div>
+
+    <div class="grid-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>paterno</th>
+                    <th>materno</th>
+                    <th>calle</th>
+                    <th>numero</th>
+                    <th>colonia</th>
+                    <th>telefono</th>
+                    <th>mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dummy data for visual representation -->
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Gómez</td>
+                    <td>Av. Reforma</td>
+                    <td>123</td>
+                    <td>Centro</td>
+                    <td>555-1234</td>
+                    <td>juan@ejemplo.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María</td>
+                    <td>López</td>
+                    <td>Díaz</td>
+                    <td>Insurgentes</td>
+                    <td>456</td>
+                    <td>Del Valle</td>
+                    <td>555-5678</td>
+                    <td>maria@ejemplo.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

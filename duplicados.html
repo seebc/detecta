@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<meta name="theme-color" content="#faf8ff" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>PAN Registro - Duplicados</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "surface-bright": "#faf8ff", "error-container": "#ffdad6", "on-secondary-container": "#465581", "on-background": "#191b22", "primary-container": "#0047bb", "tertiary-container": "#932d00", "on-surface-variant": "#434653", "tertiary-fixed": "#ffdbcf", "surface-container-lowest": "#ffffff", "on-primary-container": "#afc1ff", "tertiary": "#6c1f00", "on-primary": "#ffffff", "tertiary-fixed-dim": "#ffb59c", "surface-container-high": "#e7e7f1", "on-secondary-fixed": "#071942", "background": "#faf8ff", "secondary": "#4e5d8a", "primary-fixed-dim": "#b3c5ff", "primary": "#00328a", "surface-container": "#ededf7", "outline": "#737685", "on-error": "#ffffff", "secondary-container": "#bccbfe", "inverse-primary": "#b3c5ff", "inverse-surface": "#2e3038", "on-tertiary-container": "#ffb096", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#832700", "secondary-fixed-dim": "#b6c5f8", "inverse-on-surface": "#f0f0fa", "surface-tint": "#2156ca", "error": "#ba1a1a", "surface-variant": "#e2e2ec", "surface": "#faf8ff", "on-secondary-fixed-variant": "#364570", "surface-container-low": "#f3f3fd", "surface-dim": "#d9d9e3", "on-surface": "#191b22", "outline-variant": "#c3c6d6", "surface-container-highest": "#e2e2ec", "primary-fixed": "#dbe1ff", "on-tertiary-fixed": "#390c00", "on-primary-fixed-variant": "#003ea6", "on-secondary": "#ffffff", "on-primary-fixed": "#00174a", "on-error-container": "#93000a" }, fontFamily: { "headline": ["Manrope"], "body": ["Inter"], "label": ["Inter"] }, borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, }, }, }
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+body { min-height: max(884px, 100dvh); touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+</style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 bg-[#faf8ff] dark:bg-slate-900 backdrop-blur-md shadow-none transition-all duration-200">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-all duration-200 active:scale-95 text-[#00328a]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-manrope font-extrabold text-[#00328a] text-lg tracking-tight">PAN Registro</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/15">
+<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1HCv8cPMAdujP7Xk3-aX3Nlf_s-akHjOIrzJwnTfgnga8pwwFVGKzODsgyV4mNawU-_02TFb7JiFKI0E2WtwIzuAMrUnVmWY_8wBcBhxtHDu43kyrUHHAkLMJAqYWkYV_Il4Q_XsQ4WQAhyDPSqnhKCgtmAVFe3BziTiDV58luFBwv0hCJIX-tRUmsRxGEH7nMZWKwk08peh50OhTC3o7SWD-dfM0-s159hFd-aIfw7fb8R34QionqtVmCG59nrc28JFajoPHN1A"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<section class="mb-10 text-center md:text-left">
+<div class="inline-flex items-center justify-center p-3 mb-4 rounded-2xl bg-tertiary-container text-on-tertiary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<h2 class="text-3xl font-extrabold tracking-tight text-primary mb-3">Coincidencia Detectada</h2>
+<p class="text-on-surface-variant leading-relaxed font-medium">Hemos encontrado registros similares. Verifique si la persona ya ha sido capturada antes de continuar.</p>
+</section>
+<div class="space-y-4 mb-12">
+<div class="flex items-center justify-between px-2 mb-2">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Coincidencias Encontradas</h3>
+<span class="bg-primary-container text-on-primary-container px-2.5 py-0.5 rounded-full text-xs font-bold">2 RESULTADOS</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_32px_rgba(25,27,34,0.04)] border border-transparent hover:border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div><h4 class="text-lg font-bold text-on-surface tracking-tight">RICARDO GONZÁLEZ PÉREZ</h4><p class="text-sm text-on-surface-variant font-medium">Folio: <span class="text-primary font-bold">#PAN-88291</span></p></div>
+<span class="bg-surface-container-high px-2 py-1 rounded-md text-[10px] font-bold text-secondary">95% MATCH</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg"><p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Distrito</p><p class="text-sm font-semibold text-on-surface">Distrito Federal 04</p></div>
+<div class="bg-surface-container-low p-3 rounded-lg"><p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Colonia</p><p class="text-sm font-semibold text-on-surface">Lomas de Chapultepec</p></div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3 px-4 rounded-lg bg-secondary-container text-on-secondary-container font-bold text-sm transition-all hover:bg-opacity-80 active:scale-95">Ver Detalles</button>
+<button class="flex-1 py-3 px-4 rounded-lg border-2 border-error text-error font-bold text-sm transition-all hover:bg-error/5 active:scale-95" onclick="alert('Registro descartado (es duplicado).')">Es un Duplicado</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_32px_rgba(25,27,34,0.04)] border border-transparent hover:border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div><h4 class="text-lg font-bold text-on-surface tracking-tight">RICARDO G. PÉREZ ESTRADA</h4><p class="text-sm text-on-surface-variant font-medium">Folio: <span class="text-primary font-bold">#PAN-77402</span></p></div>
+<span class="bg-surface-container-high px-2 py-1 rounded-md text-[10px] font-bold text-secondary">82% MATCH</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3 rounded-lg"><p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Distrito</p><p class="text-sm font-semibold text-on-surface">Distrito Federal 04</p></div>
+<div class="bg-surface-container-low p-3 rounded-lg"><p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Colonia</p><p class="text-sm font-semibold text-on-surface">Polanco IV Sección</p></div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3 px-4 rounded-lg bg-secondary-container text-on-secondary-container font-bold text-sm transition-all hover:bg-opacity-80 active:scale-95">Ver Detalles</button>
+<button class="flex-1 py-3 px-4 rounded-lg border-2 border-error text-error font-bold text-sm transition-all hover:bg-error/5 active:scale-95" onclick="alert('Registro descartado (es duplicado).')">Es un Duplicado</button>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-8">
+<p class="text-center text-sm font-medium text-primary mb-4">¿Ninguno de los anteriores coincide con el registro actual?</p>
+<a href="historial.html">
+<button class="w-full py-4 px-6 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2">
+<span>No es un Duplicado, Continuar</span><span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</a>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-[#faf8ff]/80 dark:bg-slate-950/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 transition-transform duration-300 active:scale-90" href="inicio.html"><span class="material-symbols-outlined">home</span><span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Inicio</span></a>
+<a class="flex flex-col items-center justify-center text-[#00328a] dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-xl px-4 py-1 transition-transform duration-300 active:scale-90" href="captura.html"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit_document</span><span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Captura</span></a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 transition-transform duration-300 active:scale-90" href="historial.html"><span class="material-symbols-outlined">history</span><span class="font-manrope text-[11px] font-semibold uppercase tracking-wider mt-1">Historial</span></a>
+</nav>
+</body></html>
